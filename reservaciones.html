@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale 1.0">
+        <title>EcoHonduras</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/reservaciones.css">
+    </head>
+    <body>
+        <header>
+            <div>
+                <figure>
+                    <img src="img/logo.png" alt="Logo EcoHonduras">
+                </figure>
+            </div>
+            <div>
+                <h1>EcoHonduras</h1>
+                <p>Tierra de historia, selva y mar. Libre, soberana e independiente.</p>
+            </div>      
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="cultura.html">Cultura</a></li>
+                    <li><a href="reservaciones.html">Reservaciones</a></li>
+                    <li><a href="contactos.html">Contactanos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="intro-reservas">
+                <h2>Reservaciones y solicitud de tours</h2>
+                <p>Completa el formulario y nuestro equipo de atención al turista se comunicará contigo para confirmar tu circuito. Los campos marcados con asterisco (*) son obligatorios.</p>
+            </section>
+
+            <section id="formulario-reservas">
+                <h3>Solicitud de tour</h3>
+
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend><strong>Datos del viajero titular</strong> </legend>
+
+                        <div>
+                            <label for="nombre">Nombre completo</label><br>
+                            <input type="text" id="nombre" name="nombre"
+                                required minlength="3" maxlength="80"
+                                pattern="[A-Za-zÁÉÍÓÚÜáéíóúüÑñ' ]{3,80}"
+                                placeholder="Ej: María Fernanda López">
+                        </div>
+
+                        <div>
+                            <label for="telefono">Número telefónico</label><br>
+                            <input type="tel" id="telefono" name="telefono"
+                                required inputmode="numeric"
+                                pattern="[2389][0-9]{7}"
+                                placeholder="Ej: 98765432">
+                            <small id="ayuda-telefono">8 dígitos, sin guiones ni espacios.</small>
+                        </div>
+
+                        <div>
+                            <label for="correo">Correo electrónico</label><br>
+                            <input type="email" id="correo" name="correo"
+                                required maxlength="100"
+                                placeholder="nombre@correo.com">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend><strong>Detalles del viaje</strong></legend>
+
+                        <div>
+                            <label for="circuito">Circuito turístico o destino</label><br>
+                            <select required>
+                                <option value="">Selecciona un destino</option>
+                                <optgroup label="Ruta Maya y Arqueología">
+                                    <option value="copan">Copán Ruinas</option>
+                                    <option value="rio-amarillo">Río Amarillo</option>
+                                </optgroup>
+                                <optgroup label="Ruta Lenca y Pueblos con Encanto">
+                                    <option value="gracias">Gracias, Lempira</option>
+                                    <option value="la-esperanza">La Esperanza e Intibucá</option>
+                                </optgroup>
+                                <optgroup label="Ecoturismo y Bosques Nublados">
+                                    <option value="celaque">Parque Nacional Celaque</option>
+                                    <option value="pico-bonito">Parque Nacional Pico Bonito</option>
+                                    <option value="la-tigra">Parque Nacional La Tigra</option>
+                                </optgroup>
+                                <optgroup label="Caribe y Arrecifes">
+                                    <option value="roatan">Roatán</option>
+                                    <option value="utila">Utila</option>
+                                    <option value="tela">Tela</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="fecha-inicio">Fecha de inicio</label><br>
+                            <input type="date" id="fecha-inicio" name="fecha_inicio"
+                                required min="2026-10-11" max="2027-12-31">
+                        </div>
+
+                        <div>
+                            <label for="fecha-retorno">Fecha de retorno</label><br>
+                            <input type="date" id="fecha-retorno" name="fecha_retorno"
+                                required min="2026-10-11" max="2027-12-31">
+                        </div>
+
+                        <div>
+                            <label for="adultos">Adultos (18 años o más)</label><br>
+                            <input type="number" id="adultos" name="adultos"
+                                required min="1" max="20" step="1" value="1">
+                        </div>
+
+                        <div>
+                            <label for="menores">Menores de 18 años</label><br>
+                            <input type="number" id="menores" name="menores"
+                                required min="0" max="20" step="1" value="0">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Tipo de hospedaje requerido</legend>
+
+                        <div>
+                            <input type="radio" id="cabaña" name="hospedaje" value="cabaña" required>
+                            <label for="cabaña">Cabaña ecológica</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="hotel" name="hospedaje" value="hotel">
+                            <label for="hotel">Hotel colonial</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="campamento" name="hospedaje" value="campamento">
+                            <label for="campamento">Campamento de montaña</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Necesidades especiales (opcional)</legend>
+
+                        <div>
+                            <input type="checkbox" id="acc-movilidad" name="accesibilidad" value="movilidad-reducida">
+                            <label for="acc-movilidad">Requiero accesibilidad para movilidad reducida</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="guia-bilingue" name="guia_bilingue" value="si">
+                            <label for="guia-bilingue">Deseo guía bilingüe (español e inglés)</label>
+                        </div>
+
+                        <div>
+                            <label for="comentarios">Otras necesidades o comentarios</label><br>
+                            <textarea id="comentarios" name="comentarios"
+                                    rows="4" cols="40" maxlength="300"
+                                    placeholder="Alergias alimentarias, ritmo de caminata, celebraciones..."
+                                    aria-describedby="ayuda-comentarios"></textarea><br>
+                            <small id="ayuda-comentarios">Máximo 300 caracteres.</small>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Compromiso del visitante</legend>
+
+                        <div>
+                            <input type="checkbox" id="compromiso" name="compromiso" value="aceptado" required>
+                            <label for="compromiso">
+                            Me comprometo a respetar el ambiente, no dejar residuos y proteger el patrimonio
+                            natural y cultural durante mi visita.
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div>
+                    <button type="submit">Enviar solicitud</button>
+                    <button type="reset">Limpiar formulario</button>
+                    </div>
+
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                &copy; EcoHonduras | Todos los derechos reservados.
+            </p>
+            <p>Portal Digital de EcoHonduras | <strong>ISC-305 Programación Web</strong> | UNAH.</p>
+            <p>Edixon Fabricio Muñoz Carranza | 20221030530</p>
+        </footer>
+    </body>
+</html>

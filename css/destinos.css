@@ -1,0 +1,83 @@
+body main section { 
+  display: block; 
+}
+
+body main section:not(:first-of-type) { 
+  margin-bottom: 3.25rem; 
+}
+
+body main article > figure img { 
+  aspect-ratio: 21 / 9; 
+}
+
+body main article > h3 { 
+  font-size: 2rem; 
+}
+
+body main article > h4 { 
+  margin: 1.4rem 0 .35rem; 
+}
+
+body main article > p { 
+  max-width: 72ch; 
+}
+
+body main article > ul { 
+  margin: 0; 
+  padding-left: 2.75rem; 
+}
+
+body main article > ul li { 
+  margin-bottom: .2rem; 
+}
+
+body main article > ul li::marker { 
+  color: var(--caribe); 
+}
+
+body main article > ul > h3 {
+  margin: 0 0 .4rem -1.25rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--selva);
+}
+
+body main article > div { 
+  margin-top: .25rem; 
+}
+
+body main article > div h4 { 
+  margin: 1.4rem 0 .6rem; 
+}
+
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  font-size: .95rem; 
+}
+
+th, td { 
+  padding: .65rem .75rem; 
+  text-align: center; 
+  border-bottom: 1px solid var(--linea); 
+}
+
+thead th { 
+  font-size: .9rem; 
+  font-weight: 600; 
+  color: #fff; 
+  background: var(--bosque); 
+}
+
+thead th:first-child, tbody td:first-child { 
+  text-align: left; 
+}
+
+tbody td:first-child { 
+  font-weight: 700; 
+  color: var(--bosque); 
+}
+
+tbody tr:nth-child(even) { 
+  background: var(--niebla); 
+}
